@@ -4,7 +4,7 @@ Crafty.c("Mario", {
 		this.requires("2D, Canvas, SpriteAnimation, mario_small")
 		// Position
 		.attr({
-			x : 200,
+			x : 200/*15*/,
 			y : 10
 		})
 		// Gravitaion (Solid) für normales Springen
@@ -65,7 +65,7 @@ Crafty.c("Mario", {
 	},
 	//Provides the animations
 	Move : function() {
-		this.requires("SpriteAnimation, Collision, Grid").animate("walk_left", 0, 0, 2).animate("walk_right", 0, 0, 2)
+		this.requires("SpriteAnimation, Collision, Grid").animate("walk_left", 0, 1, 2).animate("walk_right", 0, 0, 2)
 	},
 	camera : null,
 	points : 0,
