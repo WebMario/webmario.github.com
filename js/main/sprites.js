@@ -29,5 +29,12 @@ function loadSprites() {
     Crafty.sprite(20, "images/mario.png", {
         mario_small : [0,0]
     });
+    Crafty.sprite(80, "images/castle.png", {
+        castle : [0,0]
+    });
+    Crafty.sprite(24, "images/flag.png", {
+        flag : [0,0],
+        bar : [1,0]
+    });
     
 }
