@@ -6,7 +6,6 @@ function generateMap() {
     //                generateFloor(xa, ya);
     //            }
     //        }
-    putMario();
     generateEnemy(230, 10);
     generateMushroom(200, 10);
         
@@ -90,7 +89,10 @@ function generateMap() {
         
     generateSBFirTree(178, 9);
         
-    generateBSFirTree(197, 1);
+    setFlag(200);
         
     getCastle(205);
+
+    putMario();
+
 }
