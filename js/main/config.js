@@ -7,7 +7,7 @@ var bs = 16;
 // Game Height
 var height=230;
 // Game Width
-var width = bs*18;
+var width = bs*23;
 
 var TW = width/bs;
 var TH = height/bs;

@@ -23,11 +23,14 @@ function loadSprites() {
         iPipeRight : [6,0],
         iPipeLeftTop : [7,0],
         iPipeRightTop : [8,0],
-        mushroom : [9, 0],
+        iBonusMushroom : [9, 0],
         enemy: [11,0]
     });
     Crafty.sprite(20, "images/mario.png", {
         mario_small : [0,0]
+    });
+    Crafty.sprite(28, "images/mario_gross.png", {
+        mario_big : [0,0]
     });
     Crafty.sprite(80, "images/castle.png", {
         castle : [0,0]
