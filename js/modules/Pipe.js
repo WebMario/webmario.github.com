@@ -1,8 +1,3 @@
-//Crafty.c("PipeLeft", {
-//    init:function() {
-//        this.color("green");
-//    }
-//});
 function generatePipe(x, h) {
     var currentHight = 1;
     for(; currentHight < h; currentHight++) {
