@@ -32,7 +32,6 @@ Crafty.c("Mario", {
                 }
             }
             if(this._y > height){
-                this._x -= 100;
                 this.lost();
             }
         })
@@ -86,6 +85,7 @@ Crafty.c("Mario", {
     lost : function() {
         this.lives--;
         this.camera.refresh();
+        this._x = 200;
         this._y = 10;
         //this.destroy();
         if(this.lives <= 0) {
