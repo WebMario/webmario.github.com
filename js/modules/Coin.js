@@ -6,7 +6,7 @@ Crafty.c("Coin", {
             var collision = this.hit("Mario");
             if(collision) {
                 var mario = collision[0].obj;
-                    mario.score(1);
+                    mario.score(10);
                     this.destroy();             
             }
         });
