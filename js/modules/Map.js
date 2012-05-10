@@ -6,12 +6,11 @@ function generateMap() {
     //                generateFloor(xa, ya);
     //            }
     //        }
-    generateEnemy(230, 10);
-    generateMushroom(200, 10);
-        
+    generateGnome(230, 10);        
     generateFloor(0, 66);
        
-              
+    
+    
     generateMushroomBlock(15, 6);              
     generateCoin(19, 7)
     generateAdobe(19, 6);
