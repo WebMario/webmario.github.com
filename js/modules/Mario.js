@@ -14,7 +14,7 @@ Crafty.c("Mario", {
         this.always = function() {
             // Wenn Mario "runter" fällt, stirbt er!
             if(this._y > height){
-                this.lost();
+                this.die();
             }
         }
         // Beim Bewegen
@@ -60,8 +60,8 @@ Crafty.c("Mario", {
     die : function() {
         this.lives--;
         this.camera.refresh();
-        this._x = 200;
-        this._y = 10;
+        this._x = this.startX;
+        this._y = this.startY;
         //this.destroy();
         if(this.lives <= 0) {
             alert("Game Over!");
