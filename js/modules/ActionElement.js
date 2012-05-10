@@ -1,4 +1,6 @@
 Crafty.c("ActionElement", {
+    startX: 0,
+    startY: 0,
     init: function() {
         this.requires("2D, Canvas, Collision, Action");
         this._direction = 'r';
@@ -44,5 +46,7 @@ Crafty.c("ActionElement", {
             x : x,
             y : y
         });
+        this.startX = x;
+        this.startY = y;
     }
 });
