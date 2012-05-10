@@ -3,7 +3,7 @@ Crafty.c("Coin", {
     init: function() {
         this.requires("ActionElement, iCoin");
         this.action = function(mario) {
-            mario.score(1);
+            mario.score(10);
             this.destroy();
         }; 
         this.attr({
