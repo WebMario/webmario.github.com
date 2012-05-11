@@ -24,7 +24,8 @@ function loadSprites() {
         iPipeLeftTop : [7,0],
         iPipeRightTop : [8,0],
         iMushroom : [9, 0],
-        iEnemy: [11,0]
+        iEnemy: [11,0],
+        iStar: [12,0]
     });
     Crafty.sprite(20, "images/mario.png", {
         mario_small : [0,0]
