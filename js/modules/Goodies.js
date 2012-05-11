@@ -9,3 +9,15 @@ Crafty.c("Mushroom", {
     
     }
 });
+
+// Star
+Crafty.c("Star", {
+    init: function() {
+        //alert("done");
+        this.requires("ActionElement, iStar")
+        .action = function(mario) {
+            mario.immortal = true;
+            this.destroy();
+        };
+    }
+});
