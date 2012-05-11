@@ -58,14 +58,16 @@ Crafty.c("Mario", {
         this.camera.refresh();
     },
     die : function() {
-        this.lives--;
-        this.camera.refresh();
-        this._x = this.startX;
-        this._y = this.startY;
-        //this.destroy();
-        if(this.lives <= 0) {
-            alert("Game Over!");
-            startGame();
+        if(!immortal) {
+            this.lives--;
+            this.camera.refresh();
+            this._x = this.startX;
+            this._y = this.startY;
+            //this.destroy();
+            if(this.lives <= 0) {
+                alert("Game Over!");
+                startGame();
+            }
         }
     },
     grow : function() {
@@ -81,7 +83,9 @@ Crafty.c("Mario", {
         } else {
             lives++;
         }
-    }
+    },
+    
+    immortal: false    
 });
 
 function putMario() {
