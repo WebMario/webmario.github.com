@@ -14,7 +14,7 @@ function generateMap() {
     generateMushroomBlock(15, 6);              
     generateCoin(19, 7)
     generateAdobe(19, 6);
-    generateActionBlock(20, 6);
+    generateStarBlock(20, 6);
     generateAdobe(21, 6);
     generateActionBlock(22, 6);
     generateActionBlock(21, 10);
