@@ -10,7 +10,7 @@ Crafty.c("ActionElement", {
             if(this.isWalking) {
                 this.doStep();
             }
-         
+            
         }
         this.onHitSolid = function(box) {
             this.turn();

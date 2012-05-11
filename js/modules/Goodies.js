@@ -16,7 +16,7 @@ Crafty.c("Star", {
         //alert("done");
         this.requires("ActionElement, iStar")
         .action = function(mario) {
-            mario.immortal = true;
+            mario.immortal(10);
             this.destroy();
         };
     }

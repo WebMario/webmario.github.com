@@ -28,7 +28,8 @@ function loadSprites() {
         iStar: [12,0]
     });
     Crafty.sprite(20, "images/mario.png", {
-        mario_small : [0,0]
+        mario_small : [0,0],
+        mario_leer : [1,0]
     });
     Crafty.sprite(28, "images/mario_gross.png", {
         mario_big : [0,0]

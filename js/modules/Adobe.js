@@ -1,6 +1,6 @@
 Crafty.c("Adobe", {
     init: function() {
-        this.requires("2D, Canvas, Collision, Solid, iAdobe");
+        this.requires("Action, Solid, iAdobe");
     }
 })
 

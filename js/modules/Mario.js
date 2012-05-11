@@ -16,6 +16,16 @@ Crafty.c("Mario", {
             if(this._y > height){
                 this.die();
             }
+            if(this.isImmortal) {
+                var timeNow = new Date().getTime();
+                
+              
+                
+                if(this.immortalSeconds < timeNow) {
+
+                    this.isImmortal = false;
+                }
+            }			
         }
         // Beim Bewegen
         this.bind('Moved', function(from) {
@@ -58,16 +68,14 @@ Crafty.c("Mario", {
         this.camera.refresh();
     },
     die : function() {
-        if(!immortal) {
-            this.lives--;
-            this.camera.refresh();
-            this._x = this.startX;
-            this._y = this.startY;
-            //this.destroy();
-            if(this.lives <= 0) {
-                alert("Game Over!");
-                startGame();
-            }
+        this.lives--;
+        this.camera.refresh();
+        this._x = this.startX;
+        this._y = this.startY;
+        //this.destroy();
+        if(this.lives <= 0) {
+            alert("Game Over!");
+            startGame();
         }
     },
     grow : function() {
@@ -84,8 +92,14 @@ Crafty.c("Mario", {
             lives++;
         }
     },
-    
-    immortal: false    
+    immortalSeconds: null,
+    isImmortal: false,
+    immortal : function () {
+        this.isImmortal = true;
+        var d = new Date();
+        // 20000 = Solange ist er unsterblich
+        this.immortalSeconds = d.getTime()+5000; 
+    }
 });
 
 function putMario() {

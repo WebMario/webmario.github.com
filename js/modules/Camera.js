@@ -3,6 +3,7 @@ Crafty.c("Camera",{
         this.infoText = Crafty.e("2D, DOM, Text").attr({
             w:200
         });
+        this.time = Crafty.e("time");
         return this;
     },
     infoText : null,
@@ -23,7 +24,7 @@ Crafty.c("Camera",{
             x: 20-Crafty.viewport.x,
             y:10
         });
-        this.infoText.text("Score: "+this.mario.points+"<br />Lives: "+this.mario.lives+"<br />Gross: "+this.mario.grown);
+        this.infoText.text("Score: "+this.mario.points+"<br />Lives: "+this.mario.lives+"<br />Untötbar!: "+this.mario.isImmortal);
     //        
         
     }
