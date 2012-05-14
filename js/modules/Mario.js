@@ -18,8 +18,8 @@ Crafty.c("Mario", {
                     this.toggleComponent("mario_big", "mario_down");
                     this._y = this._y + 8;
                 } else {
-                this.toggleComponent("mario_small", "mario_down");
-            }
+                    this.toggleComponent("mario_small", "mario_down");
+                }
         });
 
         this.attr({
@@ -58,13 +58,13 @@ Crafty.c("Mario", {
             // Kollidiert mit einem Solid, stehenbleiben
             if(this.hit('Solid')) {
 
-                this.attr({
-                    x : from.x,
-                    y : from.y
+            this.attr({
+                x : from.x,
+                y : from.y
                 });
             }
             // Beim einschlagen einer neuen Richtung (Links oder Rechts)
-        }).bind("NewDirection", function(direction) {
+            }).bind("NewDirection", function(direction) {
             // Nach Links
             if(direction.x < 0) {
                 if(!this.isPlaying("walk_left")) {
@@ -94,37 +94,46 @@ Crafty.c("Mario", {
         this.camera.refresh();
     },
     die : function() {
-        this.lives--;
-        this.grown = false;
-        this._x = this.startX;
-        this._y = this.startY;
+        if(this.grown) {
+            this.diminish();
+        } else {
+            this.lives--;
+            this._x = this.startX;
+            this._y = this.startY;
+        }
         this.camera.refresh();        
         if(this.lives <= 0) {
             alert("Game Over!");
             startGame();
         }
-},
-grow : function() {
-    if(!this.grown) {
-        this.grown = true;
-        this.toggleComponent("mario_small", "mario_big");
-        this._w = 28;
-        this._h = 28;
-        this._y = this._y - 8;
-        this.animate("walk_left", 0, 1, 2).animate("walk_right", 0, 0, 2)
-    } else {
-        lives++;
+    },
+    grow : function() {
+        if(!this.grown) {
+            this.grown = true;
+            this.toggleComponent("mario_small", "mario_big");
+            this._y = this._y - 8;
+            this.animate("walk_left", 0, 1, 2).animate("walk_right", 0, 0, 2)
+        } else {
+            lives++;
+        }
+    },
+    diminish : function() {
+        this.grown = false;
+        this.toggleComponent("mario_big", "mario_small");
+        this.animate("walk_left", 0, 1, 2).animate("walk_right", 0, 0, 2);
+        this._y = 0;
+
+        
+    },
+    immortal : function() {
+        this.isImmortal = true;
+        var d = new Date();
+        this.immortalSeconds = d.getTime() + 10000;
     }
-},
-immortal : function() {
-    this.isImmortal = true;
-    var d = new Date();
-    this.immortalSeconds = d.getTime() + 10000;
-}
 });
 
 function putMario() {
-var mario = Crafty.e("Mario");
-mario.position (200, 10);
-mario.camera.refresh();
+    var mario = Crafty.e("Mario");
+    mario.position (200, 10);
+    mario.camera.refresh();
 };
