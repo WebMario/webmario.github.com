@@ -6,16 +6,19 @@ function generateMap() {
     //                generateFloor(xa, ya);
     //            }
     //        }
-    generateEnemy(230, 10);
-    generateMushroom(200, 10);
-        
+    generateGnome(230, 10);        
     generateFloor(0, 66);
        
+<<<<<<< HEAD
    	generateTurtle(250, 20);           
+=======
+    
+    
+>>>>>>> 1230f30a575adf31bc6ad5ebbfdf96816ba3ee49
     generateMushroomBlock(15, 6);              
     generateCoin(19, 7)
     generateAdobe(19, 6);
-    generateActionBlock(20, 6);
+    generateStarBlock(20, 6);
     generateAdobe(21, 6);
     generateActionBlock(22, 6);
     generateActionBlock(21, 10);

@@ -1,11 +1,11 @@
-
 Crafty.c("Adobe", {
-    init:function() {
+    init: function() {
+        this.requires("Action, Solid, iAdobe");
     }
-});
-    
+})
+
 function generateAdobe(x, y) {
-    Crafty.e("2D, Canvas, Color, Collision, Solid, Adobe, iAdobe").attr({
+    Crafty.e("Adobe").attr({
         h:bs, 
         w:bs, 
         x:x*(bs), 
