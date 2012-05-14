@@ -18,7 +18,7 @@ Crafty.c("Turtle", {
 					this.destroy();
 				}
 			} else {
-				mario.lost();
+				mario.die();
 			}
 		};
 
