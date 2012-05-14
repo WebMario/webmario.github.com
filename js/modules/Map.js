@@ -1,10 +1,10 @@
+/*
+ * Funktion durch die die Map erstellt wird.
+ * Die Map wird durch das aufrufen der einzelnen erstellungsfunktionen generiert.
+ */
+
 function generateMap() {
-	// Simple Blocks
-	//        for(var xa = 0; xa < 66 ; xa++) {
-	//            for(var ya =1; ya < 3; ya++) {
-	//                generateFloor(xa, ya);
-	//            }
-	//        }
+
 	generateGnome(230, 10);
 	generateTurtle(250, 20);
 	generateFloor(0, 66);
@@ -22,17 +22,14 @@ function generateMap() {
 	generatePipe(38, 3);
 	generatePipe(45, 4);
 	generatePipe(55, 4);
-
+        
+        generateCoin(62,8);
 	generateActionBlock(62, 7);
 
 	generateFloor(68, 83);
-	//        for(xa = 68; xa < 83 ; xa++) {
-	//            for(ya =1; ya < 3; ya++){
-	//                generateFloor(xa, ya);
-	//            }
-	//        }
 	generateAdobe(74, 6);
 	generateActionBlock(75, 6);
+        generateCoin(76,7);
 	generateAdobe(76, 6);
 
 	generateFromTo(77, 10, 8, 1, generateAdobe);
@@ -43,9 +40,10 @@ function generateMap() {
 
 	generateFromTo(88, 10, 3, 1, generateAdobe);
 	generateActionBlock(91, 10);
-
+        generateCoin(91,7);
 	generateActionBlock(91, 6);
-
+        
+        generateCoin(76,7);
 	generateAdobe(96, 6);
 
 	generateActionBlock(97, 6);
@@ -63,6 +61,7 @@ function generateMap() {
 	generateActionBlock(125, 10);
 	generateActionBlock(126, 10);
 	generateAdobe(127, 10);
+        generateCoin(125, 7);
 	generateAdobe(125, 6);
 	generateAdobe(126, 6);
 
@@ -82,7 +81,10 @@ function generateMap() {
 	generateAdobe(166, 6);
 	generateActionBlock(167, 6);
 	generateAdobe(168, 6);
-
+        generateCoin(176, 3);
+        generateCoin(176, 4);
+        generateCoin(176, 5);
+        generateCoin(176, 6);
 	generatePipe(176, 2);
 
 	generateSBFirTree(178, 9);

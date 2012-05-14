@@ -116,10 +116,10 @@ grow : function() {
         lives++;
     }
 },
-immortal : function() {
+immortal : function(time) {
     this.isImmortal = true;
     var d = new Date();
-    this.immortalSeconds = d.getTime() + 10000;
+    this.immortalSeconds = d.getTime() + time*100;
 }
 });
 

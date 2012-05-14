@@ -1,12 +1,12 @@
 /* 
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * Die Basisgrössen, welche im WebMario verwendet werden. Wie die Blockgrösse,
+ * die Breite und die Höhe des Spielfeldes
  */
-// Block Size
+// Block Grösse
 var bs = 16;
-// Game Height
+// Spielhöhe
 var height=230;
-// Game Width
+// Spielbreite
 var width = bs*23;
 
 var TW = width/bs;

@@ -1,14 +1,19 @@
-window.onload = function () {
-    // Initialize Crafty
-    Crafty.init(width, // 640 Pixels Wide
-        height// 480 Pixels Tall
-        );
-    Crafty.background("url('images/bg.png')");
+/*
+ * Initialisiert das Spiel und ruft die wichtigsten Funktionen zur vorbereitung
+ * des Spielbeginns auf
+ */
 
-    Crafty.canvas.init(); // Create a Canvas Element 
-    // Define Floor
+window.onload = function () {
+    // Initialisiere Crafty
+    Crafty.init(width, //Breite des Spiels
+        height// Höhe des Spiels
+        );
+    Crafty.background("url('images/bg.png')"); //Hintergrundbild laden
+
+    Crafty.canvas.init(); // Generiere das Hauptcanvas, in welchem das Spiel abläuft 
+    //Funktion zum laden der Sprites wird aufgerufen
     loadSprites(); 
-        
+    // Startet das eigentliche Spiel
     startGame();
     
 }
