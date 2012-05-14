@@ -16,3 +16,16 @@ mario.grow();
 if(mario.lives != 3) {
     alert("Mario bekommt kein neues Leben nach Pilzkonsum");
 }
+
+//Test Mario punktet
+var punkteAktuell = mario.score;
+mario.score(10);
+if(mario.score <= punkteAktuell) {
+    alert("Mario hat nicht gepunktet!");
+}
+
+// Test Mario wird unsterblich
+mario.immortal(10);
+if(mario.isImmortal != true) {
+    alert("Mario ist nicht unsterblich");
+}
