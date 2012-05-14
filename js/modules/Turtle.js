@@ -4,8 +4,7 @@ Crafty.c("Turtle", {
         this.requires("ActionElement, iTurtle");
         this.action = function(mario) {
             if((mario._y + (mario._h - this._h) < this._y) || mario.isImmortal) {
-                mario._up = true;
-                mario._y -= 10;
+                mario._up
                 mario.score(10);
                 if(!this.transformed) {
                     this.transformTurtle();
