@@ -2,20 +2,12 @@ Crafty.c("Target",
     {
         finished: false,
         init: function() {
-            this.addComponent('Collision')
-            .bind("EnterFrame", function() {
-                var collision = this.hit("Mario");
-                if(collision) {             
-                    
-                    if(!this.finished) {
-                        var mario = collision[0].obj;
-
-                        alert("Geschafft! Du hast "+mario.points+" Punkte");
-                        this.finished = true;    
+            this.requires("Action");
+            this.action = function(mario) {
+                alert("Geschafft! Du hast "+mario.points+" Punkte");
+                this.finished = true;    
                 Crafty.stop();    
-                }
-                }
-            });
+            }
         }
     });
 function getCastle(xa) {

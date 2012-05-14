@@ -27,5 +27,5 @@ Crafty.c("Turtle", {
 });
 function generateTurtle(x, y) {
     var enemy = Crafty.e("Turtle");
-    enemy.position(x, y);
+    enemy.position(x*bs, height-y*bs);
 }

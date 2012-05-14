@@ -126,4 +126,5 @@ immortal : function() {
 function putMario() {
 var mario = Crafty.e("Mario");
 mario.position (200, 10);
+mario.camera.refresh();
 };

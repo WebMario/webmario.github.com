@@ -16,5 +16,5 @@ Crafty.c("Gnome", {
 
 function generateGnome(x, y) {
     var enemy = Crafty.e("Gnome");
-    enemy.position(x, y);
+    enemy.position(x*bs, height-y*bs);
 }
