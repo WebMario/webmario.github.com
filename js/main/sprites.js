@@ -1,18 +1,5 @@
 function loadSprites() {
 	// Sprites laden
-
-	// This will create entities called floor, wall1 and stairs
-	Crafty.sprite(32, "images/dungeon.png", {
-		floor : [0, 0],
-		wall1 : [2, 1],
-		stairs : [3, 1]
-	});
-
-	// This will create entities called hero1 and blob1
-	Crafty.sprite(32, "images/characters.png", {
-		hero1 : [5, 3],
-		blob1 : [4, 7]
-	});
 	Crafty.sprite(16, "images/sprites.png", {
 		iFloor : [0, 0],
 		iActionBlock : [1, 0],
@@ -32,8 +19,8 @@ function loadSprites() {
 		mario_leer : [1, 0]
 	});
 	Crafty.sprite(20, "images/turtle.png", {
-		turtle : [1, 0],
-		turtle_down : [2, 0]
+		iTurtle : [1, 0],
+		iTurtleDown : [2, 0]
 	});
 	Crafty.sprite(28, "images/mario_gross.png", {
 		mario_big : [0, 0]
@@ -41,16 +28,6 @@ function loadSprites() {
 
 	Crafty.sprite(20, "images/mario_down.png", {
 		mario_down : [0, 0]
-	});
-	Crafty.sprite(80, "images/castle.png", {
-		castle : [0, 0]
-	});
-	Crafty.sprite(24, "images/flag.png", {
-		flag : [0, 0],
-		bar : [1, 0]
-	});
-	Crafty.sprite(28, "images/mario_gross.png", {
-		mario_big : [0, 0]
 	});
 	Crafty.sprite(80, "images/castle.png", {
 		castle : [0, 0]

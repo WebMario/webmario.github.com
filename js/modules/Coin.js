@@ -1,7 +1,7 @@
 // Coin
 Crafty.c("Coin", {
     init: function() {
-        this.requires("ActionElement, iCoin");
+        this.requires("Action, iCoin");
         this.action = function(mario) {
             mario.score(10);
             this.destroy();

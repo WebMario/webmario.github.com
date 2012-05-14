@@ -1,4 +1,6 @@
 Crafty.c("Action", {
+    startX : 0,
+    startY : 0,
     init : function() {
         this.requires("2D, Canvas, Collision")
         .bind("EnterFrame", function() {
@@ -32,5 +34,13 @@ Crafty.c("Action", {
     downAction : function(mario) {
         
     },
-    always: function() {}
+    always: function() {},
+    position : function (x, y) {
+        this.attr({
+            x : x,
+            y : y
+        });
+        this.startX = x;
+        this.startY = y;
+    }
 });

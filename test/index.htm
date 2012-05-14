@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+	<title>Minecraft 2D - Alpha Alpha</title>
+	<link href="Minecraft%202D%20-%20Alpha%20Alpha-Dateien/global.css" type="text/css" rel="stylesheet">
+	
+	<script src="Minecraft%202D%20-%20Alpha%20Alpha-Dateien/socket.js"></script>
+	<script type="text/javascript" src="Minecraft%202D%20-%20Alpha%20Alpha-Dateien/jquery.js"></script>
+	<script type="text/javascript" src="Minecraft%202D%20-%20Alpha%20Alpha-Dateien/mousewheel.js"></script>
+	<script type="text/javascript" src="Minecraft%202D%20-%20Alpha%20Alpha-Dateien/crafty-min.js"></script>
+	
+	<script type="text/javascript" src="Minecraft%202D%20-%20Alpha%20Alpha-Dateien/sprite.js"></script>
+	<script type="text/javascript" src="Minecraft%202D%20-%20Alpha%20Alpha-Dateien/mc.js"></script>
+</head>
+<body>
+
+<div style="width: 512px; height: 416px; overflow: hidden; position: relative;" id="cr-stage">
+
+<div id="list">
+<ul><li data-id="0" style="background: url(assets/Blockworld.png) no-repeat -0px -0px"></li><li data-id="1" style="background: url(assets/Blockworld.png) no-repeat -32px -0px"></li><li data-id="2" style="background: url(assets/Blockworld.png) no-repeat -64px -0px"></li><li data-id="3" style="background: url(assets/Blockworld.png) no-repeat -96px -0px"></li><li data-id="4" style="background: url(assets/Blockworld.png) no-repeat -128px -0px"></li><li data-id="5" style="background: url(assets/Blockworld.png) no-repeat -160px -0px"></li><li data-id="6" style="background: url(assets/Blockworld.png) no-repeat -192px -0px"></li><li data-id="7" style="background: url(assets/Blockworld.png) no-repeat -224px -0px"></li><li data-id="8" style="background: url(assets/Blockworld.png) no-repeat -256px -0px"></li><li data-id="9" style="background: url(assets/Blockworld.png) no-repeat -288px -0px"></li><li data-id="10" style="background: url(assets/Blockworld.png) no-repeat -320px -0px"></li><li data-id="11" style="background: url(assets/Blockworld.png) no-repeat -352px -0px"></li><li data-id="12" style="background: url(assets/Blockworld.png) no-repeat -384px -0px"></li><li data-id="13" style="background: url(assets/Blockworld.png) no-repeat -416px -0px"></li><li data-id="14" style="background: url(assets/Blockworld.png) no-repeat -448px -0px"></li><li data-id="15" style="background: url(assets/Blockworld.png) no-repeat -480px -0px"></li><li data-id="16" style="background: url(assets/Blockworld.png) no-repeat -512px -0px"></li><li data-id="17" style="background: url(assets/Blockworld.png) no-repeat -544px -0px"></li><li data-id="18" style="background: url(assets/Blockworld.png) no-repeat -576px -0px"></li><li data-id="19" style="background: url(assets/Blockworld.png) no-repeat -608px -0px"></li><li data-id="20" style="background: url(assets/Blockworld.png) no-repeat -640px -0px"></li><li data-id="21" style="background: url(assets/Blockworld.png) no-repeat -672px -0px"></li><li data-id="22" style="background: url(assets/Blockworld.png) no-repeat -704px -0px"></li><li data-id="23" style="background: url(assets/Blockworld.png) no-repeat -736px -0px"></li><li data-id="24" style="background: url(assets/Blockworld.png) no-repeat -768px -0px"></li><li data-id="25" style="background: url(assets/Blockworld.png) no-repeat -800px -0px"></li><li data-id="26" style="background: url(assets/Blockworld.png) no-repeat -832px -0px"></li><li data-id="27" style="background: url(assets/Blockworld.png) no-repeat -864px -0px"></li><li data-id="28" style="background: url(assets/Blockworld.png) no-repeat -896px -0px"></li><li data-id="29" style="background: url(assets/Blockworld.png) no-repeat -928px -0px"></li><li data-id="30" style="background: url(assets/Blockworld.png) no-repeat -960px -0px"></li><li data-id="31" style="background: url(assets/Blockworld.png) no-repeat -0px -32px"></li><li data-id="32" style="background: url(assets/Blockworld.png) no-repeat -32px -32px"></li><li data-id="33" style="background: url(assets/Blockworld.png) no-repeat -64px -32px"></li><li data-id="34" style="background: url(assets/Blockworld.png) no-repeat -96px -32px"></li><li data-id="35" style="background: url(assets/Blockworld.png) no-repeat -128px -32px"></li><li data-id="36" style="background: url(assets/Blockworld.png) no-repeat -160px -32px"></li><li data-id="37" style="background: url(assets/Blockworld.png) no-repeat -192px -32px"></li><li data-id="38" style="background: url(assets/Blockworld.png) no-repeat -224px -32px"></li><li data-id="39" style="background: url(assets/Blockworld.png) no-repeat -256px -32px"></li><li data-id="40" style="background: url(assets/Blockworld.png) no-repeat -288px -32px"></li><li data-id="41" style="background: url(assets/Blockworld.png) no-repeat -320px -32px"></li><li data-id="42" style="background: url(assets/Blockworld.png) no-repeat -352px -32px"></li><li data-id="43" style="background: url(assets/Blockworld.png) no-repeat -384px -32px"></li><li data-id="44" style="background: url(assets/Blockworld.png) no-repeat -0px -96px"></li><li data-id="45" style="background: url(assets/Blockworld.png) no-repeat -32px -96px"></li><li data-id="46" style="background: url(assets/Blockworld.png) no-repeat -64px -96px"></li></ul>
+</div>
+
+<ul style="display: block;" id="inventory">
+	<li class="over"><a class="empty"></a></li>
+	<li><a class="empty"></a></li>
+	<li><a class="empty"></a></li>
+	<li><a class="empty"></a></li>
+	<li><a class="empty"></a></li>
+	<li><a class="empty"></a></li>
+	<li><a class="empty"></a></li>
+	<li><a class="empty"></a></li>
+	<li class="end"><a class="empty"></a></li>
+</ul>
+
+<div style="display: none;" id="login">
+<strong style="display: inline;" class="msg">Nickname taken</strong><br>
+Choose your name: <input value="1234asdf" id="nick" type="text">
+<button id="subm">Go</button>
+</div>
+
+<div style="position: absolute; z-index: 1; top: -3280px; left: -32px;"><div class="NPC 2D DOM player_u obj" id="ent563" style="position: absolute; visibility: visible; width: 0px; height: 0px; z-index: 0; opacity: 1; -moz-transform: translate3d(428px, 3978px, 0pt);"></div><div class="2D DOM Text Name obj" id="ent564" style="position: absolute; visibility: visible; width: 50px; height: 20px; z-index: 0; opacity: 1; -moz-transform: translate3d(418px, 3958px, 0pt);">asdfasdf</div><div class="NPC 2D DOM player_u obj" id="ent565" style="position: absolute; visibility: visible; width: 0px; height: 0px; z-index: 0; opacity: 1; -moz-transform: translate3d(68px, 3809px, 0pt);"></div><div class="2D DOM Text Name obj" id="ent566" style="position: absolute; visibility: visible; width: 50px; height: 20px; z-index: 0; opacity: 1; -moz-transform: translate3d(58px, 3789px, 0pt);">charli3</div></div><canvas style="position: absolute; left: 0px; top: 0px;" height="416" width="512"></canvas></div>
+
+<div id="instructions">
+<dl>
+	<dt>E or I</dt><dd>Open inventory</dd>
+	<dt>Left Click</dt><dd>Destroy block</dd>
+	<dt>Right Click</dt><dd>Place block</dd>
+	<dt>Scroll Wheel</dt><dd>Select inventory item</dd>
+</dl>
+</div>
+	
+<div id="credits">
+<a href="http://mojang.com/">Minecraft is owned by Mojang AB</a><br>
+<a href="http://www.minecraft.net/prepurchase.jsp">Buy the real Minecraft</a>
+</div>
+
+<div id="crafty">
+<a href="http://craftyjs.com/"><img src="Minecraft%202D%20-%20Alpha%20Alpha-Dateien/logo.png" alt="Crafty JS, JavaScript Game Engine"></a>
+</div>
+
+
+</body></html>

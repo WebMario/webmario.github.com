@@ -1,23 +1,16 @@
 Crafty.c("ActionElement", {
-    startX: 0,
-    startY: 0,
     speed : 1,
     init: function() {
-        this.requires("2D, Canvas, Collision, Action");
+        this.requires("Action, Gravity");
         this._direction = 'r';
-        this.addComponent('Gravity')
-        .gravity("Solid");
-        this.always = function(mario) {
-            if(this.isWalking) {
+        this.gravity("Solid");
+        this.always = function() {
                 this.doStep();
-            }
-            
         }
         this.onHitSolid = function(box) {
             this.turn();
         };
     },
-    isWalking : false,
     turn : function() {
 
         if(this._direction == 'r') {
@@ -41,13 +34,5 @@ Crafty.c("ActionElement", {
                 y : this.y
             });
         }
-    },
-    position : function (x, y) {
-        this.attr({
-            x : x,
-            y : y
-        });
-        this.startX = x;
-        this.startY = y;
     }
 });
