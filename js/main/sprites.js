@@ -24,12 +24,18 @@ function loadSprites() {
 		mario_small : [0, 0],
 		mario_leer : [1, 0]
 	});
+        Crafty.sprite(20, "images/mario_blink.png", {
+		mario_blink : [0, 0]
+	});
 	Crafty.sprite(20, "images/turtle.png", {
 		iTurtle : [1, 0],
 		iTurtleDown : [2, 0]
 	});
 	Crafty.sprite(28, "images/mario_gross.png", {
 		mario_big : [0, 0]
+	});
+        Crafty.sprite(28, "images/mario_gross_blink.png", {
+		mario_big_blink : [0, 0]
 	});
 
 	Crafty.sprite(20, "images/mario_down.png", {
