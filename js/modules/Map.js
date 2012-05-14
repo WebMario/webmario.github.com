@@ -5,8 +5,8 @@
 
 function generateMap() {
 
-	generateGnome(230, 10);
-	generateTurtle(250, 20);
+	generateGnome(18, 3);
+	generateTurtle(30, 3);
 	generateFloor(0, 66);
 
 	generateMushroomBlock(15, 6);
