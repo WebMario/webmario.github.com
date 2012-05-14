@@ -38,6 +38,12 @@ Crafty.c("Mario", {
                 if(this.immortalSeconds < timeNow) {
 
                     this.isImmortal = false;
+                    if(this.grown == false) {
+                        this.toggleComponent("mario_blink", "mario_small");
+                    }
+                    else {
+                        this.toggleComponent("mario_big_blink", "mario_big");
+                    }
                 }
             }
         
@@ -129,6 +135,12 @@ Crafty.c("Mario", {
         this.isImmortal = true;
         var d = new Date();
         this.immortalSeconds = d.getTime() + 10000;
+        if(this.grown == false) {
+            this.toggleComponent("mario_small", "mario_blink")
+        }
+        else {
+            this.toggleComponent("mario_big", "mario_big_blink")
+        }
     }
 });
 
