@@ -4,14 +4,17 @@ Crafty.c("Turtle", {
         this.requires("ActionElement, iTurtle");
         this.action = function(mario) {
             if((mario._y + (mario._h - this._h) < this._y) || mario.isImmortal) {
-                mario._up
                 mario.score(10);
+                
                 if(!this.transformed) {
                     this.transformTurtle();
                 } else {
                     this.destroy();
                 }
-            } else {
+                mario._up = true;
+                
+                mario._y -= 4*bs;
+        } else {
                 mario.die();
             }
         };
@@ -20,7 +23,6 @@ Crafty.c("Turtle", {
     transformTurtle : function() {
         this.toggleComponent("iTurtle", "iTurtleDown");
         this.speed = 3;
-        this._gx = 50;
         this.transformed = true;
     }
 });
