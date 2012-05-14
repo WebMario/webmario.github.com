@@ -1,3 +1,9 @@
+/*
+ * Lädt sämtliche Sprites, die während des Spielablaufs verwendet werden.
+ */
+
+
+
 function loadSprites() {
 	// Sprites laden
 	Crafty.sprite(16, "images/sprites.png", {
