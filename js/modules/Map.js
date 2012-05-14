@@ -11,7 +11,7 @@ function generateMap() {
         
     generateFloor(0, 66);
        
-              
+   	generateTurtle(250, 20);           
     generateMushroomBlock(15, 6);              
     generateCoin(19, 7)
     generateAdobe(19, 6);
