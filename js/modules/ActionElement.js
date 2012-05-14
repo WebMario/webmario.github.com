@@ -1,6 +1,7 @@
 Crafty.c("ActionElement", {
     startX: 0,
     startY: 0,
+    speed : 1,
     init: function() {
         this.requires("2D, Canvas, Collision, Action");
         this._direction = 'r';
@@ -31,12 +32,12 @@ Crafty.c("ActionElement", {
     doStep : function() {
         if(this._direction == 'r') {
             this.attr({
-                x : this.x + 1,
+                x : this.x + this.speed,
                 y : this.y
             });
         } else if(this._direction == 'l') {
             this.attr({
-                x : this.x - 1,
+                x : this.x - this.speed,
                 y : this.y
             });
         }
