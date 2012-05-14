@@ -1,17 +1,24 @@
 Crafty.c("Mario", {
-    // Component Vars
+    // Kamera wird initalisiert
     camera : null,
+    // Startpunktzahl von Mario
     points : 0,
+    // Anzahl leben zu beginn
     lives : 3,
+    // Anzahl Sekunden Unsterblichkeit initalisieren
     immortalSeconds : null,
+    // Status Unsterblich Ja/Nein
     isImmortal : false,
+    // Status Grösse Gross/klein
     grown : false,
     init : function() {
-        // Benötigte Componenten
+        // Benötigte Komponenten
         this.requires("Action, SpriteAnimation, Gravity, mario_small")
+        // Gravitation auf alle festen Elemente
         .gravity("Solid")
-        // Keyboard belegung
+        // Tastaturbelegung
         .addComponent('Twoway').twoway(2.7)
+        // Wenn Taste down gedrückt, Mario bückt sich!
         .bind('KeyDown', function() {
             if(this.isDown('DOWN_ARROW'))
                 if(this.grown == true) {
@@ -21,7 +28,7 @@ Crafty.c("Mario", {
                     this.toggleComponent("mario_small", "mario_down");
                 }
         });
-
+        // Startposition von Mario setzen
         this.attr({
             x:200, 
             y:0
@@ -32,6 +39,7 @@ Crafty.c("Mario", {
             if(this._y > height) {
                 this.die();
             }
+            // Prüfen ob Mario noch unsterblich sein muss, falls nein sterblich machen und Bild ändern
             if(this.isImmortal) {
                 var timeNow = new Date().getTime();
 
@@ -46,7 +54,7 @@ Crafty.c("Mario", {
                     }
                 }
             }
-        
+            // Wenn Mari gebükct ist, grösse vermindern
             if(this.has('mario_down')) {
                 if(!this.isDown('DOWN_ARROW')) {
                     if(this.grown) {
@@ -95,10 +103,12 @@ Crafty.c("Mario", {
         .animate("walk_left", 0, 1, 2).animate("walk_right", 0, 0, 2);
 
     },
+    //Punkten funktion
     score : function(how_many) {
         this.points += how_many;
         this.camera.refresh();
     },
+    // Mario stirbt und wird an Start zurückgesetzt!
     die : function() {
         if(this.grown) {
             this.diminish();
@@ -113,6 +123,7 @@ Crafty.c("Mario", {
             startGame();
         }
     },
+    // Mario wächst.
     grow : function() {
         if(!this.grown) {
             this.grown = true;
@@ -123,6 +134,7 @@ Crafty.c("Mario", {
             lives++;
         }
     },
+    
     diminish : function() {
         this.grown = false;
         this.toggleComponent("mario_big", "mario_small");
@@ -131,6 +143,7 @@ Crafty.c("Mario", {
 
         
     },
+    // Mario wird unsterblich
     immortal : function() {
         this.isImmortal = true;
         var d = new Date();
@@ -143,7 +156,7 @@ Crafty.c("Mario", {
         }
     }
 });
-
+// Mario durch Funktion auf dem Spielfeld platzieren.
 function putMario() {
     var mario = Crafty.e("Mario");
     mario.position (200, 10);
