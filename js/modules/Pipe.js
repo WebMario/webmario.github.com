@@ -1,3 +1,7 @@
+/*
+ * Modul für die Röhren Links und Recht je oben und Unten.
+ */
+
 function generatePipe(x, h) {
     var currentHight = 1;
     for(; currentHight < h; currentHight++) {
