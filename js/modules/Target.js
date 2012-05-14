@@ -10,6 +10,12 @@ Crafty.c("Target",
             }
         }
     });
+    
+Crafty.c("Flag", {
+    init: function() {
+        this.requires("Action");
+    }
+});
 function getCastle(xa) {
     var hi = bs *5;
     var wi = bs * 5;
