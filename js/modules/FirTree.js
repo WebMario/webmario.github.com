@@ -1,4 +1,6 @@
-
+/*
+ * Modul zum erstellen der Adobe Türme Links/Rechts
+ */
 Crafty.c("FirTree", {
     init:function() {
         this.requires("2D, Canvas, Solid, iFir")
