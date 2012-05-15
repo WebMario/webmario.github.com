@@ -1,3 +1,8 @@
+/*
+ *  Die Ziegelstein Klasse wird für die Map verwendet und stellt den Boden dar.
+ * 	Sie erbt von der Klasse solid und Action
+ */
+
 Crafty.c("Adobe", {
     init: function() {
         this.requires("Action, Solid, iAdobe").

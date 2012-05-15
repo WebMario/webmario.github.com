@@ -1,3 +1,7 @@
+/*
+ *  Target stellt das Ziel dar und wir am Ende der Map erreicht.
+ */
+
 Crafty.c("Target", 
     {
         finished: false,
@@ -10,12 +14,13 @@ Crafty.c("Target",
             }
         }
     });
-    
+  
 Crafty.c("Flag", {
     init: function() {
         this.requires("Action");
     }
 });
+//Setzt das Schloss in der Map
 function getCastle(xa) {
     var hi = bs *5;
     var wi = bs * 5;
@@ -32,7 +37,7 @@ function getCastle(xa) {
         y:height-(4*bs)
     });
 }
-
+//Setzt die Flagge vor dem Schloss
 function setFlag(xa) {
     generateBSFirTree(xa, 1);
     Crafty.e("2D, Canvas, flag").attr({
