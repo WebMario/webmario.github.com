@@ -1,5 +1,5 @@
 Crafty.c("Turtle", {
-	ormed : false,
+	transormed : false,
 	init : function() {
 		this.requires("ActionElement, iTurtle");
 		this.action = function(mario) {
