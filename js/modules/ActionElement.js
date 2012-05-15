@@ -1,9 +1,16 @@
+/*
+ * Behandelt ein automatisch bewegliches Element
+ */
+
 Crafty.c("ActionElement", {
+    // Geschwindigikeit des Elements
     speed : 1,
     init: function() {
+        // Gravitation und Action, erste Richtung wird angegeben.
         this.requires("Action, Gravity");
         this._direction = 'r';
         this.gravity("Solid");
+        // Funktionen des ActionModuls werden überschrieben
         this.always = function() {
                 this.doStep();
         }
@@ -11,6 +18,7 @@ Crafty.c("ActionElement", {
             this.turn();
         };
     },
+    // Wenn das Element mit einem anderen Element kollidiert, dreht es sich
     turn : function() {
 
         if(this._direction == 'r') {
@@ -22,6 +30,7 @@ Crafty.c("ActionElement", {
         }
 
     },
+    // Führt einen Schritt aus.
     doStep : function() {
         if(this._direction == 'r') {
             this.attr({
