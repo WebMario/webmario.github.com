@@ -12,6 +12,8 @@ Crafty.c("Turtle", {
 				if(!this.transformed) {
 					this.transformTurtle(mario);
 				} else {
+					mario._y -= 10;
+					mario._gy = 2;
 					this.destroy();
 				}
 			} else {
@@ -26,7 +28,7 @@ Crafty.c("Turtle", {
 		mario._gy = 1;
 		this.toggleComponent("iTurtle", "iTurtleDown");
 		this.speed = 3;
-		this._gx = 50;
+		this._gx = 30;
 		this.transformed = true;
 	}
 });
