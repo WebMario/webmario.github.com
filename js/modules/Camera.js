@@ -30,6 +30,6 @@ Crafty.c("Camera",{
             x: 20-Crafty.viewport.x,
             y:10
         });
-        this.infoText.text("Score: "+this.mario.points+"<br />Lives: "+this.mario.lives+"<br />Immortal: "+this.mario.isImmortal);
+        this.infoText.text("Score: "+this.mario.points+"<br />Lives: "+this.mario.lives);
     }
 }); 
