@@ -131,7 +131,7 @@ Crafty.c("Mario", {
             this._y = this._y - 8;
             this.animate("walk_left", 0, 1, 2).animate("walk_right", 0, 0, 2)
         } else {
-            lives++;
+            this.lives++;
         }
     },
     
