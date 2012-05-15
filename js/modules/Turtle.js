@@ -2,7 +2,7 @@
  * Die Klasse Turtle stellt den Gegner "Schildkröte" dar. Sie erbt von der Klasse ActionElement.
  */
 
-rafty.c("Turtle", {
+Crafty.c("Turtle", {
 	//Boolean für die Transformation in den Panzer
 	transformed : false,
 	init : function() {
