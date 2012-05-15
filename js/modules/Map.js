@@ -59,7 +59,7 @@ function generateMap() {
 
 	generateActionBlock(102, 6);
 	generateActionBlock(105, 6);
-	generateActionBlock(105, 10);
+	generateStarBlock(105, 10);
 	generateActionBlock(108, 6);
 
 	generateAdobe(114, 6);
@@ -68,7 +68,7 @@ function generateMap() {
 
 	generateAdobe(124, 10);
 	generateActionBlock(125, 10);
-	generateActionBlock(126, 10);
+	generateMushroomBlock(126, 10);
 	generateAdobe(127, 10);
     generateCoin(125, 7);
 	generateAdobe(125, 6);
