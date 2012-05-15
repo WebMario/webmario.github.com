@@ -8,6 +8,3 @@ var bs = 16;
 var height=230;
 // Spielbreite
 var width = bs*23;
-
-var TW = width/bs;
-var TH = height/bs;
