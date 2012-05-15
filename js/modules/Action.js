@@ -1,3 +1,7 @@
+/*
+ *  Für diverse Arten von Events, welche von anderen Komponenten verwendet werden.
+ */
+
 Crafty.c("Action", {
     startX : 0,
     startY : 0,
@@ -28,13 +32,18 @@ Crafty.c("Action", {
         
 
     },
+    // Wird aufgerufen, wenn ein Element mit einem anderen Element vom Typ solid kolidiert.
     onHitSolid : function(box) {},
+    // Wird aufgerufen, wenn mit Mario kollidiert wird
     action: function(mario) {
     },
+    // Wird aufgerufen, wenn Mario unterhalb kollidiert.
     downAction : function(mario) {
         
     },
+    // Wird bei jedem Frame aufgerufen
     always: function() {},
+    // Lässt die Position eines Element genau angeben.
     position : function (x, y) {
         this.attr({
             x : x,
